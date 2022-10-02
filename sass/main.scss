@@ -1,36 +1,130 @@
-*{
-    padding:0;
-    margin:0;
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap');
+
+$btn-bg-color: #ff2571;
+$bg-color: #fff;
+$txt-color: #cf649a;
+$bg-hov-color: #f9b6d77e;
+$small-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+@mixin fontfamily {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+@mixin center {
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin centered {
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+}
+
+* {
+    padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
 
-body{
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    height:100vh;
-    background: #ffffff;
+body {
+    @include fontfamily;
+    @include centered;
+    height: 100vh;
+    background: $bg-color;
 }
 
-h1{
-    color: #cf649a;
-    font-size:42px;
+.navbar {
+    width: 100%;
+    background-color: $txt-color;
+    color: $bg-color;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 5px;
+    list-style: none;
+    height: 80px;
+    box-shadow: $small-box-shadow;
+
+    .nav-item {
+        display: flex;
+        width: 17%;
+
+        li {
+            font-weight: 600;
+            font-size: 18px;
+            padding: 8px 20px;
+
+            &:hover {
+                cursor: pointer;
+                border-radius: 5px;
+                background-color: $bg-hov-color;
+            }
+        }
+    }
+
+    .nav-search {
+        display: flex;
+        @include center;
+
+        i {
+            cursor: pointer;
+            padding: 8px;
+            background-color: $bg-hov-color;
+        }
+    }
+
+    input[type=text] {
+        float: right;
+        padding: 6px;
+        border: none;
+        font-size: 17px;
+        width: 180px;
+    }
 }
-button{
-    padding:15px 40px;
-    background-color: #669999;
-    color:#ffffff;
+
+h1 {
+    color: $txt-color;
+    font-size: 42px;
+    font-weight: 800;
+}
+
+.mydiv {
+    padding-top: 50px;
+    text-align: center;
+    width: 100%;
+
+}
+
+.lorem {
+    display: flex;
+    @include centered;
+    width: 80%;
+    margin: auto;
+    height: 50vh;
+    font-weight: 400;
+    text-align: justify;
+
+    p {
+        padding: 20px;
+    }
+}
+
+button {
+    padding: 15px 40px;
+    background-color: $btn-bg-color;
+    color: #ffffff;
     border-radius: 5px;
-    border:none;
-    display:flex;
-    margin:auto;
-    font-size:18px;
+    border: none;
+    display: flex;
+    margin: auto;
+    font-size: 18px;
     font-weight: bold;
     letter-spacing: 1px;
 
-    &:hover{
-        cursor:pointer;
+    &:hover {
+        cursor: pointer;
         transition: 1s ease;
-        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        box-shadow: $small-box-shadow;
     }
 }

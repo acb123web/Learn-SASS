@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap");
 * {
   padding: 0;
   margin: 0;
@@ -5,21 +6,88 @@
 }
 
 body {
+  font-family: "Nunito Sans", sans-serif;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  height: 100vh;
+  background: #fff;
+}
+
+.navbar {
+  width: 100%;
+  background-color: #cf649a;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 5px;
+  list-style: none;
+  height: 80px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+.navbar .nav-item {
+  display: flex;
+  width: 17%;
+}
+.navbar .nav-item li {
+  font-weight: 600;
+  font-size: 18px;
+  padding: 8px 20px;
+}
+.navbar .nav-item li:hover {
+  cursor: pointer;
+  border-radius: 5px;
+  background-color: rgba(249, 182, 215, 0.4941176471);
+}
+.navbar .nav-search {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 100vh;
-  background: #ffffff;
+}
+.navbar .nav-search i {
+  cursor: pointer;
+  padding: 8px;
+  background-color: rgba(249, 182, 215, 0.4941176471);
+}
+.navbar input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  font-size: 17px;
+  width: 180px;
 }
 
 h1 {
   color: #cf649a;
   font-size: 42px;
+  font-weight: 800;
+}
+
+.mydiv {
+  padding-top: 50px;
+  text-align: center;
+  width: 100%;
+}
+
+.lorem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50vh;
+  width: 80%;
+  margin: auto;
+  height: 50vh;
+  font-weight: 400;
+  text-align: justify;
+}
+.lorem p {
+  padding: 20px;
 }
 
 button {
   padding: 15px 40px;
-  background-color: #669999;
+  background-color: #ff2571;
   color: #ffffff;
   border-radius: 5px;
   border: none;
