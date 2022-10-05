@@ -1,26 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;400;600;800&display=swap');
-
-$btn-bg-color: #ff2571;
-$bg-color: #fff;
-$txt-color: #cf649a;
-$bg-hov-color: #f9b6d77e;
-$small-box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-
-@mixin fontfamily {
-    font-family: 'Nunito Sans', sans-serif;
-}
-
-@mixin center {
-    align-items: center;
-    justify-content: center;
-}
-
-@mixin centered {
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-}
-
+@import './mixin';
+@import './variables';
 * {
     padding: 0;
     margin: 0;
@@ -81,32 +61,46 @@ body {
         font-size: 17px;
         width: 180px;
     }
+    input[type=text]:focus{
+    outline: none;
+    }
 }
 
 h1 {
+    padding: 20px;
     color: $txt-color;
     font-size: 42px;
     font-weight: 800;
 }
 
 .mydiv {
-    padding-top: 50px;
+    position: relative;
     text-align: center;
     width: 100%;
-
+    height: 33vh;
+    margin: 7% auto;
 }
 
 .lorem {
+    position: relative;
     display: flex;
     @include centered;
-    width: 80%;
+    width: 95%;
     margin: auto;
-    height: 50vh;
     font-weight: 400;
     text-align: justify;
 
     p {
         padding: 20px;
+    }
+    div{
+        margin-top:20px;
+    }
+    img{
+        position: relative;
+        display: flex;
+        width:700px;
+        border-radius: 10px;
     }
 }
 
@@ -118,13 +112,14 @@ button {
     border: none;
     display: flex;
     margin: auto;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
     letter-spacing: 1px;
+    box-shadow: $small-box-shadow;
 
     &:hover {
         cursor: pointer;
         transition: 1s ease;
-        box-shadow: $small-box-shadow;
+        box-shadow: none;
     }
 }

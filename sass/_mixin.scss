@@ -1,0 +1,13 @@
+@mixin fontfamily {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+@mixin center {
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin centered {
+    align-items: center;
+    justify-content: center;
+}
