@@ -112,6 +112,7 @@ button {
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 button:hover {
+  background: #cf649a;
   cursor: pointer;
   transition: 1s ease;
   box-shadow: none;

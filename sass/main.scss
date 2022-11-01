@@ -118,6 +118,7 @@ button {
     box-shadow: $small-box-shadow;
 
     &:hover {
+        @include background(#cf649a);
         cursor: pointer;
         transition: 1s ease;
         box-shadow: none;
